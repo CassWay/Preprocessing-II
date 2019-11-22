@@ -1,24 +1,51 @@
-.home {
+.home {  
+  .top-content {
+
+    .img-content {
+      width: 100%;
+    }
+    img {
+      width: 99%;
+      margin: 1%;
+    }
+    
+    .text-container {
+      margin: 2%;
+      border-bottom: 2px dashed @navigation-border;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+    }
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        .flex-mobile;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        .flex-mobile;
+      }
+
       img {
         border-radius: 10px;
+        @media @mobile {
+        width: 96%;
+        }
       }
     }
   }
@@ -26,7 +53,13 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      .flex-mobile;
 
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -42,8 +75,16 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      .flex-mobile;
+    }
+
     img {
       border-radius: 10px;
+      @media @mobile {
+      width: 99%;
+      padding: 1%;
+      }
     }
   }
 
@@ -53,9 +94,76 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      .flex-mobile;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        .flex-mobile;
+      }
+      .btn {
+        .signup(96%,36px,3%)
+      }
+      .btn:hover {
+        background-color:@seaweed;
+        color: white;
+      } 
     }
+  }
+  .info-form {
+    background-color: @seaweed;
+    border-radius: 5px;
+    color: @shark;
+    padding: 2%;
+    margin: 2%;
+    font-size: 1.4rem;
+      h4 {
+        margin-bottom: 13px;
+        text-align: center;
+      }
+      label {
+        display: inline-block;
+        width: 20%;
+        @media @mobile {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      input[type=text] {
+        border: 2px solid black;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        border-radius: 5px;
+        width: 78%;
+        @media @mobile {
+          width: 100%;
+        }
+      }
+      input[type=text]:focus {
+        background-color: @sandy-beach;
+      }
+      input[type=submit] {
+        background-color: @eastern-blue;
+        border: 2px solid black;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        margin-left: 42%;
+        @media @mobile {
+          margin-left: 35%;
+        }
+        cursor: pointer;
+        border-radius: 5px;
+      }
   }
 }// home
